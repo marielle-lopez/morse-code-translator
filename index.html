@@ -5,31 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Morse Code Translator</title>
   </head>
-  <body>
+  <body class="body">
     <h1>Morse Code Translator</h1>
 
-    <div>
-      <p>Morse</p>
+    <div class="translate-order">
+      <p class="translate-order__to-translate-language">Morse</p>
+
       <button>
         <img src="./resources/images/swap.png" alt="Swap symbol" />
       </button>
-      <p>English</p>
+
+      <p class="translate-order__translated-language">English</p>
     </div>
 
-    <div>
+    <div class="to-translate">
       <input
         type="text"
         id="toTranslate"
-        name="toTranslate"
+        class="to-translate__textbox"
+        name="to-translate"
         placeholder="Type or paste here the text you want translated"
       />
       <button>Translate</button>
     </div>
-    <input
-      type="text"
-      id="translated"
-      name="translated"
-      placeholder="Translation"
-    />
+
+    <div class="translated">
+      <input
+        type="text"
+        id="translated"
+        class="translated__textbox"
+        name="translated"
+        placeholder="Translation"
+      />
+    </div>
   </body>
 </html>
