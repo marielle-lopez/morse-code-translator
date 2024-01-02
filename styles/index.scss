@@ -85,21 +85,36 @@
     }
   }
 
-  &__translate-button {
-    width: fit-content;
-    padding: 12px 20px;
+  &__interaction-area {
+    display: flex;
+    justify-content: flex-end;
 
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    color: white;
-    background-color: variables.$primary-button-color;
-    border: none;
-    border-radius: 15px;
+    &__error-message {
+      margin-right: 20px;
 
-    &:hover {
-      background-color: variables.$button-interaction-color-dark;
+      font-size: 14px;
+      font-weight: 500;
+      color: variables.$error-text-color;
+    }
+
+    &__translate-button {
+      width: fit-content;
+      padding: 12px 20px;
+  
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      color: white;
+      background-color: variables.$primary-button-color;
+      border: none;
+      border-radius: 15px;
+  
+      &:hover {
+        background-color: variables.$button-interaction-color-dark;
+      }
     }
   }
+
+
 }
 
 .translated {

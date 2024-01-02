@@ -66,7 +66,17 @@
 .to-translate__textbox::placeholder {
   color: #9198b1;
 }
-.to-translate__translate-button {
+.to-translate__interaction-area {
+  display: flex;
+  justify-content: flex-end;
+}
+.to-translate__interaction-area__error-message {
+  margin-right: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #c1121f;
+}
+.to-translate__interaction-area__translate-button {
   width: fit-content;
   padding: 12px 20px;
   font-family: "Poppins", sans-serif;
@@ -76,7 +86,7 @@
   border: none;
   border-radius: 15px;
 }
-.to-translate__translate-button:hover {
+.to-translate__interaction-area__translate-button:hover {
   background-color: #2f3653;
 }
 
