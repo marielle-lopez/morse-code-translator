@@ -54,12 +54,14 @@
   border-radius: 20px;
 }
 .to-translate__textbox {
-  display: flex;
   height: 150px;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   background-color: #d6dbee;
   border: none;
+}
+.to-translate__textbox:focus {
+  outline: none;
 }
 .to-translate__textbox::placeholder {
   color: #9198b1;

@@ -69,13 +69,16 @@
   border-radius: 20px;
 
   &__textbox {
-    display: flex;
     height: 150px;
 
     font-family: "Poppins", sans-serif;
     font-size: 15px;
     background-color: variables.$secondary-bg-color;
     border: none;
+
+    &:focus {
+      outline: none;
+    }
 
     &::placeholder {
       color: variables.$placeholder-text-color;
