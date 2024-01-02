@@ -1,0 +1,124 @@
+@use "./partials/variables";
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: "Poppins", sans-serif;
+  background-color: variables.$primary-bg-color;
+}
+
+.page-heading {
+  font-weight: 400;
+  color: variables.$primary-text-color;
+
+  margin-top: 60px;
+}
+
+.translate-order {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 40px;
+
+  &__to-translate-language,
+  &__translated-language {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+    border-radius: 15px;
+    width: 150px;
+    height: 50px;
+  }
+
+  &__swap-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50px;
+    width: 50px;
+    margin: 0 10px;
+
+    background-color: variables.$secondary-bg-color;
+    border: none;
+    border-radius: 15px;
+
+    &__symbol {
+      height: 30px;
+    }
+
+    &:hover {
+      background-color: variables.$button-interaction-color-light;
+    }
+  }
+}
+
+.to-translate {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 20px;
+  width: 350px;
+  padding: 20px;
+
+  background-color: variables.$secondary-bg-color;
+  border-radius: 20px;
+
+  &__textbox {
+    display: flex;
+    height: 150px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    background-color: variables.$secondary-bg-color;
+    border: none;
+
+    &::placeholder {
+      color: variables.$placeholder-text-color;
+    }
+  }
+
+  &__translate-button {
+    width: fit-content;
+    padding: 12px 20px;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: white;
+    background-color: variables.$primary-button-color;
+    border: none;
+    border-radius: 15px;
+
+    &:hover {
+      background-color: variables.$button-interaction-color-dark;
+    }
+  }
+}
+
+.translated {
+  display: flex;
+
+  width: 350px;
+  padding: 20px;
+
+  background-color: variables.$secondary-bg-color;
+  border-radius: 20px;
+
+  &__textbox {
+    height: 200px;
+    flex-grow: 1;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    background-color: variables.$secondary-bg-color;
+    border: none;
+
+    &::placeholder {
+      color: variables.$placeholder-text-color;
+    }
+  }
+}
