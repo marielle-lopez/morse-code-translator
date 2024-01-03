@@ -7,6 +7,7 @@
 - Added Morse code to English translation functionality
 - Refactored code and created separate JavaScript files for related functions
 - Added copy-to-clipboard feature
+- Improved styling to conform to modern webpage effects
 
 Based on feedback from my FakeOS project, I created individual JavaScript documents to house functions based on how they were related to one another. Initially, I had a single `script.js` file containing all of my JavaScript functions, but then moved them into their respective place.
 
