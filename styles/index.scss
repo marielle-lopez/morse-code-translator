@@ -47,12 +47,14 @@
     border: none;
     border-radius: 15px;
 
-    &__symbol {
-      height: 30px;
-    }
+    transition: 0.3s;
 
     &:hover {
       background-color: variables.$button-interaction-color-light;
+    }
+
+    &__symbol {
+      height: 30px;
     }
   }
 }
@@ -107,6 +109,8 @@
       background-color: variables.$primary-button-color;
       border: none;
       border-radius: 15px;
+
+      transition: 0.3s;
   
       &:hover {
         background-color: variables.$button-interaction-color-dark;
@@ -160,14 +164,16 @@
       background-color: variables.$secondary-bg-color;
       border: none;
       padding: 0;
+      opacity: 20%;
 
+      transition: 0.3s;
+
+      &:hover {
+        opacity: 100%;
+      }
+      
       &__copy-image {
-        opacity: 20%;
         width: 25px;
-
-        &:hover {
-          opacity: 100%;
-        }
       }
     }
   }
