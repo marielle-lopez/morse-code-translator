@@ -149,9 +149,10 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    gap: 10px;
 
     &__message {
-      margin: 0 10px;
+      margin: 0;
 
       font-size: 14px;
       font-weight: 500;
@@ -174,6 +175,25 @@
       
       &__copy-image {
         width: 25px;
+      }
+    }
+
+    &__audio-button {
+      display: flex;
+
+      background-color: variables.$secondary-bg-color;
+      border: none;
+      padding: 0;
+      opacity: 40%;
+
+      transition: 0.3s;
+
+      &:hover {
+        opacity: 100%;
+      }
+      
+      &__audio-image {
+        width: 20px;
       }
     }
   }

@@ -115,9 +115,10 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  gap: 10px;
 }
 .translated__interaction-area__message {
-  margin: 0 10px;
+  margin: 0;
   font-size: 14px;
   font-weight: 500;
   color: #444a53;
@@ -135,4 +136,18 @@
 }
 .translated__interaction-area__copy-button__copy-image {
   width: 25px;
+}
+.translated__interaction-area__audio-button {
+  display: flex;
+  background-color: #d6dbee;
+  border: none;
+  padding: 0;
+  opacity: 40%;
+  transition: 0.3s;
+}
+.translated__interaction-area__audio-button:hover {
+  opacity: 100%;
+}
+.translated__interaction-area__audio-button__audio-image {
+  width: 20px;
 }
