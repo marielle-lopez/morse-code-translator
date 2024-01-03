@@ -2,6 +2,15 @@
 
 ## Task Completion History
 
+### January 3, 2023
+
+- Added Morse code to English translation functionality
+- Refactored code and created separate JavaScript files for related functions
+
+Based on feedback from my FakeOS project, I created individual JavaScript documents to house functions based on how they were related to one another. Initially, I had a single `script.js` file containing all of my JavaScript functions, but then moved them into their respective place.
+
+While moving the functions out of `script.js`, I took the liberty of refactoring my code wherever obvious. One of my next short-term goals is to thoroughly review my code to refactor it further and increase its readability.
+
 ### January 2, 2023
 
 - Design mockup
