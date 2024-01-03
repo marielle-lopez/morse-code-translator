@@ -18,6 +18,11 @@ const swapToTranslateLanguage = () => {
 
 const copyToClipboard = () => {
   const translation = document.querySelector(".translated__textbox").value;
+  
+  if (!translation) {
+    return;
+  };
+
   navigator.clipboard.writeText(translation);
 
   document.querySelector(".translated__interaction-area__message").innerText = "Copied!";
