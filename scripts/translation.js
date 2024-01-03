@@ -1,6 +1,7 @@
 import { displayTranslation } from "./dom-manipulation.js";
+import { getKeyByValue } from "./script.js";
 
-const morseCode = {
+export const morseCode = {
   " ": "/",
   "A": ".-",
   "B": "-...",
@@ -58,10 +59,6 @@ const morseCode = {
   "@": ".--.-.",
   "¿": "..-.-",
   "¡": "--...-"
-}
-
-const getKeyByValue = (object, value) => {
-  return Object.keys(object).find((key) => object[key] === value);
 }
 
 export const translateToMorse = (input) => {
