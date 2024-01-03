@@ -119,6 +119,7 @@
 
 .translated {
   display: flex;
+  flex-direction: column;
 
   width: 350px;
   padding: 20px;
@@ -127,7 +128,7 @@
   border-radius: 20px;
 
   &__textbox {
-    height: 200px;
+    height: 150px;
     flex-grow: 1;
 
     font-family: "Poppins", sans-serif;
@@ -137,6 +138,37 @@
 
     &::placeholder {
       color: variables.$placeholder-text-color;
+    }
+  }
+
+  &__interaction-area {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &__message {
+      margin: 0 10px;
+
+      font-size: 14px;
+      font-weight: 500;
+      color: variables.$primary-text-color;
+    }
+
+    &__copy-button {
+      display: flex;
+
+      background-color: variables.$secondary-bg-color;
+      border: none;
+      padding: 0;
+
+      &__copy-image {
+        opacity: 20%;
+        width: 25px;
+
+        &:hover {
+          opacity: 100%;
+        }
+      }
     }
   }
 }
