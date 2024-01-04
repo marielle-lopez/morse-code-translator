@@ -2,6 +2,16 @@
 
 ## Task Completion History
 
+### January 4, 2023
+
+- Added basic text-to-audio feature for Morse code
+
+Another quality-of-life feature I implemented text-to-audio. However, this is currently only available for English to Morse code translation, and works on user input that only contains the English alphabet (no special characters, no space, etc.).
+
+I downloaded the audio files for each English alphabetic character from [this website](https://www.morsecodeclassnet.com/ch9-morse-audio-files/), and trimmed each sound clip to my desired length using an [online audio trimmer](https://audiotrimmer.com/).
+
+I had an issue where the individual audio files of the morse signals were playing all at one when the audio button was clicked, however this was remedied with the help of this [Quora answer](https://www.quora.com/How-do-I-play-audio-one-after-another-in-JavaScript-if-it-is-in-a-for-loop).
+
 ### January 3, 2023
 
 - Added Morse code to English translation functionality
