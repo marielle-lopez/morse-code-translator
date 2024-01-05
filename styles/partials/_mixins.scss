@@ -1,0 +1,44 @@
+@use "./variables";
+
+@mixin language-container {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 40px;
+}
+
+@mixin language {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+  border-radius: 15px;
+  width: 150px;
+  height: 50px;
+}
+
+@mixin textbox-container {
+  display: flex;
+  flex-direction: column;
+
+  width: 350px;
+  padding: 20px;
+
+  background-color: variables.$secondary-bg-color;
+  border-radius: 20px;
+}
+
+@mixin textbox {
+  height: 150px;
+  flex-grow: 1;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  background-color: variables.$secondary-bg-color;
+  border: none;
+
+  &::placeholder {
+    color: variables.$placeholder-text-color;
+  }
+}

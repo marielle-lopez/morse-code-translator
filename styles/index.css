@@ -48,24 +48,25 @@
 .to-translate {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
   width: 350px;
   padding: 20px;
   background-color: #d6dbee;
   border-radius: 20px;
+  margin-bottom: 20px;
 }
 .to-translate__textbox {
   height: 150px;
+  flex-grow: 1;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   background-color: #d6dbee;
   border: none;
 }
-.to-translate__textbox:focus {
-  outline: none;
-}
 .to-translate__textbox::placeholder {
   color: #9198b1;
+}
+.to-translate__textbox:focus {
+  outline: none;
 }
 .to-translate__interaction-area {
   display: flex;
