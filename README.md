@@ -2,6 +2,12 @@
 
 ## Task Completion History
 
+### January 5, 2023
+
+- Created mixins for styling shared across multiple HTML elements
+
+'Refactored' styling code via mixins to increase code modularity. I'm still having issues figuring out how to vertically align placeholder text of a text input.
+
 ### January 4, 2023
 
 - Added basic text-to-audio feature for Morse code
@@ -23,7 +29,7 @@ Based on feedback from my FakeOS project, I created individual JavaScript docume
 
 While moving the functions out of `script.js`, I took the liberty of refactoring my code wherever obvious. One of my next short-term goals is to thoroughly review my code to refactor it further and increase its readability.
 
-I also thought about quality-of-life features such as copying to clipboard buttons, and added this function to the webpage.
+I also thought about quality-of-life features such as copying to clipboard buttons, and added this function to the webpage with the help of [this W3Schools tutorial](https://www.w3schools.com/howto/howto_js_copy_clipboard.asp).
 
 ### January 2, 2023
 
