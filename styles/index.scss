@@ -1,0 +1,156 @@
+@use "./partials/variables";
+@use "./partials/mixins";
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: "Poppins", sans-serif;
+  background-color: variables.$primary-bg-color;
+}
+
+.page-heading {
+  font-weight: 400;
+  color: variables.$primary-text-color;
+
+  margin-top: 60px;
+}
+
+.translate-order {
+  @include mixins.language-container;
+
+  &__to-translate-language,
+  &__translated-language {
+    @include mixins.language;
+  }
+
+  &__swap-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50px;
+    width: 50px;
+    margin: 0 10px;
+
+    background-color: variables.$secondary-bg-color;
+    border: none;
+    border-radius: 15px;
+
+    transition: 0.3s;
+
+    &:hover {
+      background-color: variables.$button-interaction-color-light;
+    }
+
+    &__symbol {
+      height: 30px;
+    }
+  }
+}
+
+.to-translate {
+  @include mixins.textbox-container;
+  margin-bottom: 20px;
+
+  &__textbox {
+    @include mixins.textbox;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__interaction-area {
+    display: flex;
+    justify-content: flex-end;
+
+    &__error-message {
+      margin-right: 20px;
+
+      font-size: 14px;
+      font-weight: 500;
+      color: variables.$error-text-color;
+    }
+
+    &__translate-button {
+      width: fit-content;
+      padding: 12px 20px;
+
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      color: white;
+      background-color: variables.$primary-button-color;
+      border: none;
+      border-radius: 15px;
+
+      transition: 0.3s;
+
+      &:hover {
+        background-color: variables.$button-interaction-color-dark;
+      }
+    }
+  }
+}
+
+.translated {
+  @include mixins.textbox-container;
+
+  &__textbox {
+    @include mixins.textbox;
+  }
+
+  &__interaction-area {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+
+    &__message {
+      margin: 0;
+
+      font-size: 14px;
+      font-weight: 500;
+      color: variables.$primary-text-color;
+    }
+
+    &__copy-button {
+      display: flex;
+
+      background-color: variables.$secondary-bg-color;
+      border: none;
+      padding: 0;
+      opacity: 20%;
+
+      transition: 0.3s;
+
+      &:hover {
+        opacity: 100%;
+      }
+
+      &__copy-image {
+        width: 25px;
+      }
+    }
+
+    &__audio-button {
+      display: flex;
+
+      background-color: variables.$secondary-bg-color;
+      border: none;
+      padding: 0;
+      opacity: 40%;
+
+      transition: 0.3s;
+
+      &:hover {
+        opacity: 100%;
+      }
+
+      &__audio-image {
+        width: 20px;
+      }
+    }
+  }
+}
