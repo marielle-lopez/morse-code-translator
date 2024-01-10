@@ -1,5 +1,5 @@
 import { getKeyByValue } from "./script.js";
-import { morseCode } from "./translation.js";
+import morseCode from "../data/morseCode.json" assert { type: "json" };
 
 let audioFilePaths;
 let audioPointer;
@@ -22,9 +22,10 @@ const playAudio = () => {
 export const textToAudio = () => {
   const translation = document.querySelector(".translated__textbox").value;
   const characters = translation.split(" ");
-  
-  audioFilePaths = characters.map((character) => `${getKeyByValue(morseCode, character)}.mp3`);
+
+  audioFilePaths = characters.map(
+    (character) => `${getKeyByValue(morseCode, character)}.mp3`
+  );
   audioPointer = 0;
   playAudio();
 };
-
