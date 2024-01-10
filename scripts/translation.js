@@ -1,7 +1,68 @@
 import { displayTranslation } from "./dom-manipulation.js";
 import { getKeyByValue } from "./script.js";
 
-import morseCode from "../data/morseCode.json" assert { type: "json" };
+// import morseCode from "../data/morseCode.json" assert { type: "json" };
+
+export const morseCode = {
+  " ": "/",
+  "A": ".-",
+  "B": "-...",
+  "C": "-.-.",
+  "D": "-..",
+  "E": ".",
+  "F": "..-.",
+  "G": "--.",
+  "H": "....",
+  "I": "..",
+  "J": ".---",
+  "K": "-.-",
+  "L": ".-..",
+  "M": "--",
+  "N": "-.",
+  "O": "---",
+  "P": ".--.",
+  "Q": "--.-",
+  "R": ".-.",
+  "S": "...",
+  "T": "-",
+  "U": "..-",
+  "V": "...-",
+  "W": ".--",
+  "X": "-..-",
+  "Y": "-.--",
+  "Z": "--..",
+  "0": "-----",
+  "1": ".----",
+  "2": "..---",
+  "3": "...--",
+  "4": "....-",
+  "5": ".....",
+  "6": "-....",
+  "7": "--...",
+  "8": "---..",
+  "9": "----.",
+  ".": ".-.-.-",
+  ",": "--..---",
+  "?": "..--..",
+  "'": ".----.",
+  "!": "-.-.--",
+  "/": "-..-.",
+  "(": "-.--.",
+  ")": "-.--.-",
+  "&": ".-...",
+  ":": "---...",
+  ";": "-.-.-.",
+  "=": "-...-",
+  "+": ".-.-.",
+  "-": "-....-",
+  "_": "..--.-",
+  "\\": ".-..-.",
+  "$": "...-..-",
+  "@": ".--.-.",
+  "¿": "..-.-",
+  "¡": "--...-"
+}
+
 
 export const translateToMorse = (input) => {
   const characters = input.toUpperCase().split("");
@@ -13,7 +74,6 @@ export const translateToMorse = (input) => {
     }, "")
     .trimEnd();
 
-  displayTranslation(translation);
   return translation;
 };
 
@@ -25,6 +85,5 @@ export const translateToEnglish = (input) => {
     return (string += translatedSignal);
   }, "");
 
-  displayTranslation(translation);
   return translation;
 };

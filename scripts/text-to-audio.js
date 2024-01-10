@@ -1,5 +1,6 @@
 import { getKeyByValue } from "./script.js";
-import morseCode from "../data/morseCode.json" assert { type: "json" };
+// import morseCode from "../data/morseCode.json" assert { type: "json" };
+import { morseCode } from "./translation.js";
 
 let audioFilePaths;
 let audioPointer;
@@ -20,6 +21,10 @@ const playAudio = () => {
 };
 
 export const textToAudio = () => {
+  if (document.querySelector("#toTranslate").value === "") {
+    return;
+  }
+
   const translation = document.querySelector(".translated__textbox").value;
   const characters = translation.split(" ");
 
