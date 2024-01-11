@@ -1,3 +1,5 @@
+![Morse code icon](./resources/images/morse-code.png)
+
 # Morse Code Translator
 
 Translate English text to Morse code, or Morse code to English; the choice is up to you!
@@ -9,7 +11,7 @@ Currently, this translator does not handle incorrect Morse code input, so be car
 ## Resources
 
 [Icons8](https://icons8.com/)
-  - Source of swap, audio, and copy-to-clipboard icons
+  - Source of morse code, swap, audio, and copy-to-clipboard icons
 
 [Morse Code Class Net](https://www.morsecodeclassnet.com/ch9-morse-audio-files/)
   - Source of the original audio files of Morse code signals
