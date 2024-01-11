@@ -53,5 +53,5 @@ const copyToClipboard = () => {
   setTimeout(() => {
     document.querySelector(".translated__interaction-area__message").innerText =
       "";
-  }, 4000);
+  }, 5000);
 };
