@@ -2,13 +2,31 @@
 
 ## Task Completion History
 
-### January 5, 2023
+### January 11, 2024
+
+- Added unit tests for validation function
+- Added additional audio files for Morse code signals for numbers and select special characters (space, comma, forward slash, at sign, period, question mark)
+- Added appropriate error messages to show on UI to improve UX
+
+I worked on adding unit tests for validating user input, which ended up making my code increasingly robust against different cases (such as when a user enters Morse code for English to Morse translation). In addition, it put my head to work to improve the UI/UX of this translator, specifically when it came to displaying meaningful error messages to the user. For example, if the translation mode was set to Morse to English and the user entered text with English characters, an error message would appear: "Input contains English characters".
+
+I also grabbed the audio files of the Morse code signals for the numbers 0 - 9, as well as comma, forward slash, at sign, period, and question mark. To deal with spaces, I created an audio clip with no sound to keep silences between words consistent. A message would appear next to the audio button if there was a Morse code signal that did not have a corresponding audio file to play, informing the user that the text-to-audio feature is not available for the current translation.
+
+I was able to fix the issue with the placeholder text not vertically aligning to the center - I replaced the text inputs with text areas instead, which should have been used in the first place to accommodate for multi-line text.
+
+### January 10, 2024
+
+- Added unit tests for translation functions
+
+Began adding unit tests, specifically for the `translateToMorse` and `translateToEnglish` functions. These unit tests ensure that correct translations are being done for either translation mode (Morse to English, and vice versa).
+
+### January 5, 2024
 
 - Created mixins for styling shared across multiple HTML elements
 
 'Refactored' styling code via mixins to increase code modularity. I'm still having issues figuring out how to vertically align placeholder text of a text input.
 
-### January 4, 2023
+### January 4, 2024
 
 - Added basic text-to-audio feature for Morse code
 
@@ -18,7 +36,7 @@ I downloaded the audio files for each English alphabetic character from [this we
 
 I had an issue where the individual audio files of the morse signals were playing all at one when the audio button was clicked, however this was remedied with the help of this [Quora answer](https://www.quora.com/How-do-I-play-audio-one-after-another-in-JavaScript-if-it-is-in-a-for-loop).
 
-### January 3, 2023
+### January 3, 2024
 
 - Added Morse code to English translation functionality
 - Refactored code and created separate JavaScript files for related functions
@@ -31,7 +49,7 @@ While moving the functions out of `script.js`, I took the liberty of refactoring
 
 I also thought about quality-of-life features such as copying to clipboard buttons, and added this function to the webpage with the help of [this W3Schools tutorial](https://www.w3schools.com/howto/howto_js_copy_clipboard.asp).
 
-### January 2, 2023
+### January 2, 2024
 
 - Design mockup
 - HTML
