@@ -35,6 +35,12 @@ const swapToTranslateLanguage = () => {
 
   document.querySelector("#toTranslate").value = "";
   document.querySelector("#translated").value = "";
+
+  const audioButton = document.querySelector(
+    ".translated__interaction-area__audio-button"
+  );
+  audioButton.classList.add("hidden");
+
   swapDisplayedToTranslateLanguage(toTranslateLanguage, otherLanguage);
 };
 

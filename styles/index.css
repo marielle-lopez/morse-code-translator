@@ -152,3 +152,7 @@
 .translated__interaction-area__audio-button__audio-image {
   width: 20px;
 }
+
+.hidden {
+  display: none;
+}

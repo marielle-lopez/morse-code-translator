@@ -34,25 +34,6 @@ export const textToAudio = () => {
     return;
   }
 
-  if (
-    document.querySelector(".translate-order__to-translate-language")
-      .innerText === "Morse"
-  ) {
-    const textElement = document.querySelector(
-      ".translated__interaction-area__message"
-    );
-    textElement.replaceChildren();
-    const textNode = document.createTextNode(
-      "Feature unavailable for Morse to English translations"
-    );
-    textElement.append(textNode);
-
-    setTimeout(() => {
-      textElement.replaceChildren();
-    }, 5000);
-    return;
-  }
-
   const translation = document.querySelector(".translated__textbox").value;
   const characters = translation.split(" ");
 
