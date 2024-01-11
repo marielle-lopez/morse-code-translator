@@ -78,7 +78,7 @@ export const translateToMorse = (input) => {
 };
 
 export const translateToEnglish = (input) => {
-  let signals = input.split(" ");
+  let signals = input.trim().split(" ");
 
   const translation = signals.reduce((string, signal) => {
     const translatedSignal = getKeyByValue(morseCode, signal);
