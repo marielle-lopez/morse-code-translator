@@ -21,8 +21,6 @@ export const displayTranslation = () => {
     validateInput(input, toTranslateLanguage);
     let translation;
 
-    console.log("Validated.");
-
     if (toTranslateLanguage === "English") {
       translation = translateToMorse(input);
     } else {
