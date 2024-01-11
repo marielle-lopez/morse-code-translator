@@ -68,6 +68,7 @@
 .to-translate__textbox {
   height: 150px;
   flex-grow: 1;
+  resize: none;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   background-color: #d6dbee;
@@ -115,6 +116,7 @@
 .translated__textbox {
   height: 150px;
   flex-grow: 1;
+  resize: none;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   background-color: #d6dbee;

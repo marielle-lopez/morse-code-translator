@@ -36,13 +36,15 @@
         </div>
 
         <div class="to-translate">
-          <input
+          <!-- <input
             type="text"
             id="toTranslate"
             class="to-translate__textbox"
             name="to-translate"
             placeholder="Enter the text you want translated"
-          />
+          /> -->
+
+          <textarea id="toTranslate" class="to-translate__textbox" name="to-translate" placeholder="Enter the text you want translated"></textarea>
 
           <div class="to-translate__interaction-area">
             <p class="to-translate__interaction-area__error-message"></p>
@@ -53,14 +55,16 @@
         </div>
 
         <div class="translated">
-          <input
+          <!-- <input
             type="text"
             id="translated"
             class="translated__textbox"
             name="translated"
             placeholder="Translation"
             disabled
-          />
+          /> -->
+
+          <textarea id="translated" class="translated__textbox" name="translated" placeholder="Translation will appear here" disabled></textarea>
 
           <div class="translated__interaction-area">
             <p class="translated__interaction-area__message"></p>
