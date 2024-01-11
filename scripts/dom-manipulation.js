@@ -17,8 +17,11 @@ export const displayTranslation = () => {
     ".translate-order__to-translate-language"
   ).innerText;
 
-  if (validateInput(input, toTranslateLanguage)) {
+  try {
+    validateInput(input, toTranslateLanguage);
     let translation;
+
+    console.log("Validated.");
 
     if (toTranslateLanguage === "English") {
       translation = translateToMorse(input);
@@ -26,5 +29,15 @@ export const displayTranslation = () => {
       translation = translateToEnglish(input);
     }
     document.querySelector(".translated__textbox").value = translation;
+  } catch (error) {
+    const elementNode = document.querySelector(
+      ".to-translate__interaction-area__error-message"
+    );
+    const textNode = document.createTextNode(error.message);
+    elementNode.append(textNode);
+
+    setTimeout(() => {
+      elementNode.replaceChildren();
+    }, 5000);
   }
 };
