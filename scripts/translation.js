@@ -82,6 +82,11 @@ export const translateToEnglish = (input) => {
 
   const translation = signals.reduce((string, signal) => {
     const translatedSignal = getKeyByValue(morseCode, signal);
+    
+    if (translatedSignal === undefined) {
+      return string;
+    }
+
     return (string += translatedSignal);
   }, "");
 
