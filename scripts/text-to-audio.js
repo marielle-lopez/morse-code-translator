@@ -34,23 +34,6 @@ export const textToAudio = () => {
     return;
   }
 
-  // const translation = document.querySelector(".translated__textbox").value;
-  // const characters = translation.split(" ");
-
-  // audioFilePaths = characters.map(
-  //   (character) => {
-  //     // if (/[a-zA-Z0-9]/.character) {
-  //     //   console.log("special character found!");
-  //     //   return;
-  //     // }
-  //     // console.log(character)
-
-  //     // console.log(/[^a-zA-Z0-9\s]/gi.test("!"));
-
-  //     return `${getKeyByValue(morseCode, character)}.mp3`;
-  //   }
-  // );
-
   const input = document.querySelector("#toTranslate").value;
 
   if (/[^a-zA-Z0-9\s@,.?/]/gi.test(input)) {
@@ -78,6 +61,10 @@ export const textToAudio = () => {
 
     if (character === "/") {
       return "forward-slash.mp3";
+    }
+
+    if (character === " ") {
+      return "space.mp3";
     }
 
     return `${character.toUpperCase()}.mp3`
