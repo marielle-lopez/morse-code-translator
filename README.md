@@ -6,6 +6,17 @@ A text-to-audio feature is available for English to Morse code translations.
 
 Currently, this translator does not handle incorrect Morse code input, so be careful when you're entering Morse code for Morse to English translations.
 
+## Resources
+
+[Icons8](https://icons8.com/)
+  - Source of swap, audio, and copy-to-clipboard icons
+
+[Morse Code Class Net](https://www.morsecodeclassnet.com/ch9-morse-audio-files/)
+  - Source of the original audio files of Morse code signals
+
+[AudioTrimmer](https://audiotrimmer.com/)
+  - Online web application used to trim audio files
+
 ## Task Completion History
 
 ### January 11, 2024
