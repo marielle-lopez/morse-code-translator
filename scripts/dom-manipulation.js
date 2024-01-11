@@ -13,12 +13,11 @@ export const swapDisplayedToTranslateLanguage = (
 
 export const displayTranslation = () => {
   const input = document.querySelector("#toTranslate").value;
+  const toTranslateLanguage = document.querySelector(
+    ".translate-order__to-translate-language"
+  ).innerText;
 
-  if (validateInput(input)) {
-    const toTranslateLanguage = document.querySelector(
-      ".translate-order__to-translate-language"
-    ).innerText;
-
+  if (validateInput(input, toTranslateLanguage)) {
     let translation;
 
     if (toTranslateLanguage === "English") {

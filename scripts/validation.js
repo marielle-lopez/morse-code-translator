@@ -1,17 +1,32 @@
-import { translateToMorse, translateToEnglish } from "./translation.js";
+// import { translateToMorse, translateToEnglish } from "./translation.js";
+import { morseCode } from "./translation.js";
 
-export const validateInput = (input) => {
-  if (typeof input !== "string") {
-    console.warn("Input is not of string type.");
+export const validateInput = (input, toTranslateLanguage) => {
+  const morseCodeKeys = Object.keys(morseCode).filter(
+    (key) => key !== "." && key !== "-" && key !== "/" && key !== " "
+  );
+
+  const morseCodeValues = Object.values(morseCode).filter(
+    (value) => value !== "." && value !== "-" && value !== "/"
+  );
+
+  if (input === "") {
     return false;
   }
 
-  // let toTranslateLanguage = document.querySelector(
-  //   ".translate-order__to-translate-language"
-  // ).innerText;
-  // toTranslateLanguage === "English"
-  //   ? translateToMorse(input)
-  //   : translateToEnglish(input);
+  if (
+    toTranslateLanguage === "English" &&
+    morseCodeValues.some((signal) => input.includes(signal))
+  ) {
+    return false;
+  }
+
+  if (
+    toTranslateLanguage === "Morse" &&
+    morseCodeKeys.some((character) => input.toUpperCase().includes(character))
+  ) {
+    return false;
+  }
 
   return true;
 };
