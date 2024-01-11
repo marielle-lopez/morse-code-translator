@@ -32,6 +32,7 @@ export const textToAudio = () => {
     const textElement = document.querySelector(
       ".translated__interaction-area__message"
     );
+    textElement.replaceChildren();
     const textNode = document.createTextNode(
       "Feature unavailable for Morse to English translations"
     );

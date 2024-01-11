@@ -31,6 +31,7 @@ export const displayTranslation = () => {
     const elementNode = document.querySelector(
       ".to-translate__interaction-area__error-message"
     );
+    elementNode.replaceChildren();
     const textNode = document.createTextNode(error.message);
     elementNode.append(textNode);
 
