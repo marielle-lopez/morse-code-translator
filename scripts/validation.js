@@ -1,4 +1,3 @@
-// import { translateToMorse, translateToEnglish } from "./translation.js";
 import { morseCode } from "./translation.js";
 
 export const validateInput = (input, toTranslateLanguage) => {

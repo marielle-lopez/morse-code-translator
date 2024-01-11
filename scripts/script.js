@@ -1,5 +1,4 @@
 import { swapDisplayedToTranslateLanguage } from "./dom-manipulation.js";
-// import { validateInput } from "./validation.js";
 import { displayTranslation } from "./dom-manipulation.js";
 import { textToAudio } from "./text-to-audio.js";
 
@@ -56,13 +55,3 @@ const copyToClipboard = () => {
       "";
   }, 4000);
 };
-
-// const translateButton = document.querySelector(".to-translate__interaction-area__translate-button")
-// const swapButton =  document.querySelector(".translate-order__swap-button")
-// const copyButton = document.querySelector(".translated__interaction-area__copy-button")
-// const audioButton = document.querySelector(".translated__interaction-area__audio-button")
-
-// translateButton.addEventListener("click", (e) => validateInput);
-// swapButton.addEventListener("click", (e) => swapToTranslateLanguage);
-// copyButton.addEventListener("click", (e) => copyToClipboard);
-// audioButton.addEventListener("click", (e) => textToAudio);
