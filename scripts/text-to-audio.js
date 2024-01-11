@@ -34,12 +34,57 @@ export const textToAudio = () => {
     return;
   }
 
-  const translation = document.querySelector(".translated__textbox").value;
-  const characters = translation.split(" ");
+  // const translation = document.querySelector(".translated__textbox").value;
+  // const characters = translation.split(" ");
 
-  audioFilePaths = characters.map(
-    (character) => `${getKeyByValue(morseCode, character)}.mp3`
-  );
+  // audioFilePaths = characters.map(
+  //   (character) => {
+  //     // if (/[a-zA-Z0-9]/.character) {
+  //     //   console.log("special character found!");
+  //     //   return;
+  //     // }
+  //     // console.log(character)
+
+  //     // console.log(/[^a-zA-Z0-9\s]/gi.test("!"));
+
+  //     return `${getKeyByValue(morseCode, character)}.mp3`;
+  //   }
+  // );
+
+  const input = document.querySelector("#toTranslate").value;
+
+  if (/[^a-zA-Z0-9\s@,.?/]/gi.test(input)) {
+    const errorElement = document.querySelector(".translated__interaction-area__message");
+    errorElement.replaceChildren();
+    const textNode = document.createTextNode("Translation contains special characters the text-to-audio feature does not support")
+    errorElement.append(textNode);
+
+    setTimeout(() => {
+      errorElement.replaceChildren();
+    }, 5000)
+    return;
+  }
+
+  const characters = input.split("");
+
+  audioFilePaths = characters.map((character) => {
+    if (character === ".") {
+      return "period.mp3";
+    }
+
+    if (character === "?") {
+      return "question-mark.mp3";
+    }
+
+    if (character === "/") {
+      return "forward-slash.mp3";
+    }
+
+    return `${character.toUpperCase()}.mp3`
+  });
+
+  console.log(audioFilePaths)
+
   audioPointer = 0;
   playAudio();
 };
