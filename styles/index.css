@@ -48,7 +48,7 @@
 .to-translate {
   display: flex;
   flex-direction: column;
-  width: 350px;
+  width: 450px;
   padding: 20px;
   background-color: #d6dbee;
   border-radius: 20px;
@@ -74,7 +74,7 @@
 }
 .to-translate__interaction-area__error-message {
   margin-right: 20px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   color: #c1121f;
 }
@@ -96,7 +96,7 @@
 .translated {
   display: flex;
   flex-direction: column;
-  width: 350px;
+  width: 450px;
   padding: 20px;
   background-color: #d6dbee;
   border-radius: 20px;
@@ -120,7 +120,7 @@
 }
 .translated__interaction-area__message {
   margin: 0;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   color: #444a53;
 }
