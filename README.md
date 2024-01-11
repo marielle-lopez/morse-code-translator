@@ -1,5 +1,11 @@
 # Morse Code Translator
 
+Translate English text to Morse code, or Morse code to English; the choice is up to you!
+
+A text-to-audio feature is available for English to Morse code translations.
+
+Currently, this translator does not handle incorrect Morse code input, so be careful when you're entering Morse code for Morse to English translations.
+
 ## Task Completion History
 
 ### January 11, 2024
@@ -10,7 +16,7 @@
 
 I worked on adding unit tests for validating user input, which ended up making my code increasingly robust against different cases (such as when a user enters Morse code for English to Morse translation). In addition, it put my head to work to improve the UI/UX of this translator, specifically when it came to displaying meaningful error messages to the user. For example, if the translation mode was set to Morse to English and the user entered text with English characters, an error message would appear: "Input contains English characters".
 
-I also grabbed the audio files of the Morse code signals for the numbers 0 - 9, as well as comma, forward slash, at sign, period, and question mark. To deal with spaces, I created an audio clip with no sound to keep silences between words consistent. A message would appear next to the audio button if there was a Morse code signal that did not have a corresponding audio file to play, informing the user that the text-to-audio feature is not available for the current translation.
+I also grabbed the audio files (from the [same website mentioned previously](https://www.morsecodeclassnet.com/ch9-morse-audio-files/)) of the Morse code signals for the numbers 0 - 9, as well as comma, forward slash, at sign, period, and question mark (I also trimmed them to my desired length using the same online [audio clip trimmer](https://audiotrimmer.com/)). To deal with spaces, I created an audio clip with no sound to keep silences between words consistent. A message would appear next to the audio button if there was a Morse code signal that did not have a corresponding audio file to play, informing the user that the text-to-audio feature is not available for the current translation.
 
 I was able to fix the issue with the placeholder text not vertically aligning to the center - I replaced the text inputs with text areas instead, which should have been used in the first place to accommodate for multi-line text.
 
