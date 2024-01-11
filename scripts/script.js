@@ -25,21 +25,22 @@ export const getKeyByValue = (object, value) => {
 };
 
 const swapToTranslateLanguage = () => {
+  const audioButton = document.querySelector(
+    ".translated__interaction-area__audio-button"
+  );
+
   if (toTranslateLanguage === "English") {
     toTranslateLanguage = "Morse";
     otherLanguage = "English";
+    audioButton.classList.add("hidden");
   } else {
     toTranslateLanguage = "English";
     otherLanguage = "Morse";
+    audioButton.classList.remove("hidden");
   }
 
   document.querySelector("#toTranslate").value = "";
   document.querySelector("#translated").value = "";
-
-  const audioButton = document.querySelector(
-    ".translated__interaction-area__audio-button"
-  );
-  audioButton.classList.add("hidden");
 
   swapDisplayedToTranslateLanguage(toTranslateLanguage, otherLanguage);
 };
