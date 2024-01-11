@@ -83,6 +83,7 @@
 .to-translate__interaction-area {
   display: flex;
   justify-content: flex-end;
+  padding-top: 20px;
 }
 .to-translate__interaction-area__error-message {
   margin-right: 20px;
@@ -130,9 +131,13 @@
   align-items: center;
   justify-content: flex-end;
   gap: 10px;
+  padding-top: 20px;
+  height: 28px;
 }
 .translated__interaction-area__message {
   margin: 0;
+  line-height: 14px;
+  text-align: right;
   font-size: 12px;
   font-weight: 500;
   color: #444a53;
@@ -153,6 +158,7 @@
 }
 .translated__interaction-area__audio-button {
   display: flex;
+  margin-left: 10px;
   background-color: #d6dbee;
   border: none;
   padding: 0;

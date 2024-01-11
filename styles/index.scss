@@ -75,6 +75,7 @@
   &__interaction-area {
     display: flex;
     justify-content: flex-end;
+    padding-top: 20px;
 
     &__error-message {
       margin-right: 20px;
@@ -116,10 +117,14 @@
     align-items: center;
     justify-content: flex-end;
     gap: 10px;
+    padding-top: 20px;
+    height: 28px;
 
     &__message {
       margin: 0;
 
+      line-height: 14px;
+      text-align: right;
       font-size: 12px;
       font-weight: 500;
       color: variables.$primary-text-color;
@@ -146,6 +151,7 @@
 
     &__audio-button {
       display: flex;
+      margin-left: 10px;
 
       background-color: variables.$secondary-bg-color;
       border: none;
