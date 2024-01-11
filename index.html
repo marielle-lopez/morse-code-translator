@@ -15,68 +15,78 @@
     <title>Morse Code Translator</title>
   </head>
   <body class="body">
-    <h1 class="page-heading">Morse Code Translator</h1>
+    <div class="wrapper">
+      <header>
+        <h1 class="page-heading">Morse Code Translator</h1>
+      </header>
 
-    <div class="translate-order">
-      <p class="translate-order__to-translate-language">English</p>
+      <main class="main">
+        <div class="translate-order">
+          <p class="translate-order__to-translate-language">English</p>
 
-      <button class="translate-order__swap-button">
-        <img
-          class="translate-order__swap-button__symbol"
-          src="./resources/images/swap.png"
-          alt="Swap symbol"
-        />
-      </button>
+          <button class="translate-order__swap-button">
+            <img
+              class="translate-order__swap-button__symbol"
+              src="./resources/images/swap.png"
+              alt="Swap symbol"
+            />
+          </button>
 
-      <p class="translate-order__translated-language">Morse</p>
-    </div>
+          <p class="translate-order__translated-language">Morse</p>
+        </div>
 
-    <div class="to-translate">
-      <input
-        type="text"
-        id="toTranslate"
-        class="to-translate__textbox"
-        name="to-translate"
-        placeholder="Enter the text you want translated"
-      />
-
-      <div class="to-translate__interaction-area">
-        <p class="to-translate__interaction-area__error-message"></p>
-        <button class="to-translate__interaction-area__translate-button">
-          Translate
-        </button>
-      </div>
-    </div>
-
-    <div class="translated">
-      <input
-        type="text"
-        id="translated"
-        class="translated__textbox"
-        name="translated"
-        placeholder="Translation"
-        disabled
-      />
-
-      <div class="translated__interaction-area">
-        <p class="translated__interaction-area__message"></p>
-
-        <button class="translated__interaction-area__audio-button">
-          <img
-            class="translated__interaction-area__audio-button__audio-image"
-            src="./resources/images/audio.png"
-            alt="Audio symbol"
+        <div class="to-translate">
+          <input
+            type="text"
+            id="toTranslate"
+            class="to-translate__textbox"
+            name="to-translate"
+            placeholder="Enter the text you want translated"
           />
-        </button>
 
-        <button class="translated__interaction-area__copy-button">
-          <img
-            class="translated__interaction-area__copy-button__copy-image"
-            src="./resources/images/copy.png"
-            alt="Copy to clipboard symbol"
+          <div class="to-translate__interaction-area">
+            <p class="to-translate__interaction-area__error-message"></p>
+            <button class="to-translate__interaction-area__translate-button">
+              Translate
+            </button>
+          </div>
+        </div>
+
+        <div class="translated">
+          <input
+            type="text"
+            id="translated"
+            class="translated__textbox"
+            name="translated"
+            placeholder="Translation"
+            disabled
           />
-        </button>
-      </div>
+
+          <div class="translated__interaction-area">
+            <p class="translated__interaction-area__message"></p>
+
+            <button class="translated__interaction-area__audio-button">
+              <img
+                class="translated__interaction-area__audio-button__audio-image"
+                src="./resources/images/audio.png"
+                alt="Audio symbol"
+              />
+            </button>
+
+            <button class="translated__interaction-area__copy-button">
+              <img
+                class="translated__interaction-area__copy-button__copy-image"
+                src="./resources/images/copy.png"
+                alt="Copy to clipboard symbol"
+              />
+            </button>
+          </div>
+          
+        </div> 
+      </main>
     </div>
+    <footer class="footer">
+      <p class="footer__text">Icons from <a class="footer__link" href="https://www.icons8.com/">icons8.com</a> | Made by Marielle Louisse Lopez</p>
+    </footer>
   </body>
 </html>
