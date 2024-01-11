@@ -7,17 +7,26 @@ let audioPointer;
 let audio;
 
 const playAudio = () => {
+  const messageElement = document.querySelector(
+    ".translated__interaction-area__message"
+  );
+  messageElement.replaceChildren();
+
   if (audioPointer < audioFilePaths.length) {
+    const textNode = document.createTextNode("Playing...");
+    messageElement.append(textNode);
+
     audio = new Audio(`./resources/audio/${audioFilePaths[audioPointer]}`);
     audio.addEventListener("ended", playAudio);
     audio.play();
 
-    console.log(`Playing: ${audioFilePaths[audioPointer]}`);
+    // console.log(`Playing: ${audioFilePaths[audioPointer]}`);
 
     audioPointer++;
-  } else {
-    console.log("Finished!");
   }
+  // else {
+  //   console.log("Finished!");
+  // }
 };
 
 export const textToAudio = () => {
