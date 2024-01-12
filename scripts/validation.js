@@ -1,15 +1,31 @@
-import { translateToMorse, translateToEnglish } from "./translation.js"; 
+import { morseCode } from "./translation.js";
 
-export const validateInput = (event) => {
-  const input = event.target.parentElement.previousElementSibling.value;
+export const validateInput = (input, toTranslateLanguage) => {
+  const morseCodeKeys = Object.keys(morseCode).filter(
+    (key) => key !== "." && key !== "-" && key !== "/" && key !== " "
+  );
 
-  if (typeof input !== 'string') {
-    console.warn("Input is not of string type.");
-    return false;
+  const morseCodeValues = Object.values(morseCode).filter(
+    (value) => value !== "." && value !== "-" && value !== "/"
+  );
+
+  if (input === "") {
+    throw new Error("Input cannot be empty");
   }
 
-  let toTranslateLanguage = document.querySelector(".translate-order__to-translate-language").innerText;
-  toTranslateLanguage === "English" ? translateToMorse(input) : translateToEnglish(input);
+  if (
+    toTranslateLanguage === "English" &&
+    morseCodeValues.some((signal) => input.includes(signal))
+  ) {
+    throw new Error("Input contains Morse code signals");
+  }
+
+  if (
+    toTranslateLanguage === "Morse" &&
+    morseCodeKeys.some((character) => input.toUpperCase().includes(character))
+  ) {
+    throw new Error("Input contains English characters");
+  }
 
   return true;
-}
+};
